@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buyers - Onion Market</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background: #6c3c0c;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h2 {
+      text-align: center;
+      margin: 20px 0;
+      color: #6c3c0c;
+    }
+    .container {
+      width: 90%;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 10px;
+    }
+    th {
+      background: #6c3c0c;
+      color: white;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input, select, button {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #6c3c0c;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #8a4f0e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🧅 Onion Market</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="farmer.html">Farmers</a>
+      <a href="buyers.html">Buyers</a>
+      <a href="viewmarketrate.html">Market Rates</a>
+      <a href="reports.html">Reports</a>
+    </nav>
+  </header>
+
+  <!-- Buyers Section -->
+  <div class="container">
+    <h2>👨‍💼 Buyers Dashboard</h2>
+
+    <!-- Market Rates Table -->
+    <h3>Available Market Rates</h3>
+    <table>
+      <tr>
+        <th>Market</th>
+        <th>Price (₹/Quintal)</th>
+        <th>Available Quantity</th>
+        <th>Contact</th>
+      </tr>
+      <tr>
+        <td>Nashik</td>
+        <td>₹1500</td>
+        <td>20,000 Quintals</td>
+        <td><a href="#">Contact Farmer</a></td>
+      </tr>
+      <tr>
+        <td>Pune</td>
+        <td>₹1450</td>
+        <td>18,500 Quintals</td>
+        <td><a href="#">Contact Farmer</a></td>
+      </tr>
+      <tr>
+        <td>Ahmednagar</td>
+        <td>₹1400</td>
+        <td>15,000 Quintals</td>
+        <td><a href="#">Contact Farmer</a></td>
+      </tr>
+      <tr>
+        <td>Lasalgaon</td>
+        <td>₹1550</td>
+        <td>25,000 Quintals</td>
+        <td><a href="#">Contact Farmer</a></td>
+      </tr>
+      <tr>
+        <td>Malegaon</td>
+        <td>₹1380</td>
+        <td>12,000 Quintals</td>
+        <td><a href="#">Contact Farmer</a></td>
+      </tr>
+    </table>
+
+    <!-- Place Order Form -->
+    <h3>Place Your Order</h3>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Mobile Number" required>
+      <select required>
+        <option value="">Select Market</option>
+        <option>Nashik</option>
+        <option>Pune</option>
+        <option>Ahmednagar</option>
+        <option>Lasalgaon</option>
+        <option>Malegaon</option>
+      </select>
+      <input type="number" placeholder="Quantity (Quintals)" required>
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+
+</body>
+</html>

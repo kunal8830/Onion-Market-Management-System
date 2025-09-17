@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Onion Market</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('https://images.unsplash.com/photo-1582281298059-cfdd2e8d74e8') no-repeat center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .signup-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 340px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    .signup-box h2 {
+      margin-bottom: 20px;
+      color: #6c3c0c;
+    }
+    .signup-box input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .signup-box button {
+      background: green;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 95%;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .signup-box button:hover {
+      background: darkgreen;
+    }
+    .signup-box p {
+      margin-top: 15px;
+    }
+    .signup-box a {
+      color: orange;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-box">
+    <h2>📝 Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required><br>
+      <input type="email" placeholder="Email Address" required><br>
+      <input type="text" placeholder="Username" required><br>
+      <input type="password" placeholder="Password" required><br>
+      <input type="password" placeholder="Confirm Password" required><br>
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+</body>
+</html>

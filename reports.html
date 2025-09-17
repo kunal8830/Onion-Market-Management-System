@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports - Onion Market</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background: #6c3c0c;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h2 {
+      text-align: center;
+      margin: 20px 0;
+      color: #6c3c0c;
+    }
+    .container {
+      width: 90%;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 10px;
+    }
+    th {
+      background: #6c3c0c;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🧅 Onion Market</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="viewmarketrate.html">Market Rates</a>
+      <a href="reports.html">Reports</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- Reports Section -->
+  <div class="container">
+    <h2>📊 Onion Market Reports</h2>
+
+    <!-- Chart -->
+    <h3>Price Trend (Last 7 Days)</h3>
+    <canvas id="priceChart" width="400" height="200"></canvas>
+
+    <!-- Top Markets -->
+    <h3>Top Markets by Trading Volume</h3>
+    <table>
+      <tr>
+        <th>Market</th>
+        <th>Total Volume (Quintals)</th>
+      </tr>
+      <tr>
+        <td>Nashik</td>
+        <td>25,000</td>
+      </tr>
+      <tr>
+        <td>Pune</td>
+        <td>18,500</td>
+      </tr>
+      <tr>
+        <td>Ahmednagar</td>
+        <td>15,200</td>
+      </tr>
+      <tr>
+        <td>Lasalgaon</td>
+        <td>30,000</td>
+      </tr>
+      <tr>
+        <td>Malegaon</td>
+        <td>10,800</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Chart Script -->
+  <script>
+    const ctx = document.getElementById('priceChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['9 Sept', '10 Sept', '11 Sept', '12 Sept', '13 Sept', '14 Sept', '15 Sept'],
+        datasets: [{
+          label: 'Average Price (₹/Quintal)',
+          data: [1300, 1400, 1350, 1450, 1500, 1420, 1480],
+          borderColor: 'orange',
+          backgroundColor: 'rgba(255,165,0,0.2)',
+          borderWidth: 2,
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

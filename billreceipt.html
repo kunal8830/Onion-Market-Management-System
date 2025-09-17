@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Receipt - Onion Market</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background: #f9f9f9;
+    }
+    .receipt {
+      background: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 600px;
+      margin: auto;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+    }
+    h2 {
+      text-align: center;
+      color: #6c3c0c;
+    }
+    .section {
+      margin-bottom: 15px;
+    }
+    .section h3 {
+      margin-bottom: 5px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 3px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background: #eee;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+    .btn-print {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background: #6c3c0c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn-print:hover {
+      background: #945622;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="receipt">
+    <h2>🧾 Onion Market Bill Receipt</h2>
+    
+    <!-- Bill Info -->
+    <div class="section">
+      <p><b>Bill No:</b> #BILL20250915</p>
+      <p><b>Date:</b> 15 Sept 2025</p>
+    </div>
+    
+    <!-- Buyer Info -->
+    <div class="section">
+      <h3>Buyer Details</h3>
+      <p><b>Name:</b> Rahul Sharma</p>
+      <p><b>Contact:</b> +91 9876543210</p>
+    </div>
+    
+    <!-- Farmer Info -->
+    <div class="section">
+      <h3>Farmer Details</h3>
+      <p><b>Name:</b> Ramesh Patil</p>
+      <p><b>Market:</b> Nashik</p>
+    </div>
+    
+    <!-- Order Info -->
+    <div class="section">
+      <h3>Order Details</h3>
+      <table>
+        <tr>
+          <th>Order ID</th>
+          <th>Quantity</th>
+          <th>Price per Quintal</th>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <td>ORD101</td>
+          <td>50 Quintals</td>
+          <td>₹1500</td>
+          <td>₹75,000</td>
+        </tr>
+      </table>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+      <p>✅ Thank you for trading with Onion Market</p>
+      <p>📞 Helpline: +91-1800-ONION-MKT</p>
+    </div>
+
+    <button class="btn-print" onclick="window.print()">🖨 Print Bill</button>
+  </div>
+
+</body>
+</html>

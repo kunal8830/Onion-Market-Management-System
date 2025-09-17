@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buyer Dashboard - Onion Market</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+    header {
+      background: #0c5c3c;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      width: 90%;
+      margin: 20px auto;
+    }
+    h2 {
+      color: #0c5c3c;
+      text-align: center;
+    }
+    .actions {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      width: 22%;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    .card:hover {
+      background: #d8f3e2;
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 10px;
+    }
+    th {
+      background: #0c5c3c;
+      color: white;
+    }
+    .notifications {
+      background: white;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🧅 Onion Market</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="farmer.html">Farmers</a>
+      <a href="buyers.html">Buyers</a>
+      <a href="viewmarketrate.html">Market Rates</a>
+      <a href="reports.html">Reports</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Welcome -->
+    <h2>👨‍💼 Welcome, Buyer Rahul Sharma</h2>
+
+    <!-- Quick Actions -->
+    <div class="actions">
+      <div class="card">📈 View Market Rates</div>
+      <div class="card">🔍 Search Farmers Stock</div>
+      <div class="card">🛒 Place New Order</div>
+      <div class="card">📦 Track My Orders</div>
+    </div>
+
+    <!-- Available Stock -->
+    <h3>Available Farmer Stock</h3>
+    <table>
+      <tr>
+        <th>Farmer</th>
+        <th>Market</th>
+        <th>Quantity (Quintals)</th>
+        <th>Price (₹/Quintal)</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+      <tr>
+        <td>Ramesh Patil</td>
+        <td>Nashik</td>
+        <td>200</td>
+        <td>₹1500</td>
+        <td>Available</td>
+        <td><button>Buy</button></td>
+      </tr>
+      <tr>
+        <td>Sunil Deshmukh</td>
+        <td>Pune</td>
+        <td>150</td>
+        <td>₹1450</td>
+        <td>Available</td>
+        <td><button>Buy</button></td>
+      </tr>
+      <tr>
+        <td>Vijay Pawar</td>
+        <td>Ahmednagar</td>
+        <td>180</td>
+        <td>₹1400</td>
+        <td>Sold Out</td>
+        <td><button disabled>Not Available</button></td>
+      </tr>
+    </table>
+    <h3>My Orders</h3>
+<table>
+  <tr>
+    <th>Order ID</th>
+    <th>Farmer</th>
+    <th>Quantity</th>
+    <th>Total Price</th>
+    <th>Status</th>
+    <th>Bill</th>
+  </tr>
+  <tr>
+    <td>ORD101</td>
+    <td>Ramesh Patil</td>
+    <td>50</td>
+    <td>₹75,000</td>
+    <td>Pending</td>
+    <td><a href="billreceipt.html" target="_blank"><button>View Bill</button></a></td>
+  </tr>
+  <tr>
+    <td>ORD102</td>
+    <td>Sunil Deshmukh</td>
+    <td>30</td>
+    <td>₹43,500</td>
+    <td>Completed</td>
+    <td><a href="billreceipt.html" target="_blank"><button>View Bill</button></a></td>
+  </tr>
+</table>
+
+    <!-- My Orders -->
+    <h3>My Orders</h3>
+    <table>
+      <tr>
+        <th>Order ID</th>
+        <th>Farmer</th>
+        <th>Quantity</th>
+        <th>Total Price</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>ORD101</td>
+        <td>Ramesh Patil</td>
+        <td>50</td>
+        <td>₹75,000</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>ORD102</td>
+        <td>Sunil Deshmukh</td>
+        <td>30</td>
+        <td>₹43,500</td>
+        <td>Completed</td>
+      </tr>
+    </table>
+
+    <!-- Notifications -->
+    <div class="notifications">
+      <h3>🔔 Notifications</h3>
+      <ul>
+        <li>New stock available in Lasalgaon market at ₹1550.</li>
+        <li>Your order ORD101 is being processed by farmer Ramesh.</li>
+        <li>Ahmednagar stock is sold out today.</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
