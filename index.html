@@ -1,10 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Simple HTML Program</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onion Market Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background: #6c3c0c;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('onionback.webp') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .hero button {
+      background: orange;
+      border: none;
+      padding: 12px 25px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 30px 20px;
+      background: #fff;
+    }
+    .feature-card {
+      background: #f0f0f0;
+      padding: 20px;
+      margin: 10px;
+      flex: 1 1 200px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: white;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 10px;
+    }
+    table th {
+      background: #6c3c0c;
+      color: white;
+    }
+    .about {
+      padding: 30px 20px;
+      text-align: center;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    footer a {
+      color: orange;
+      margin: 0 8px;
+      text-decoration: none;
+    }
+
+
+    /* Mobile devices */
+@media (max-width: 767px) {
+  body { font-size: 14px; }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body { font-size: 16px; }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+  body { font-size: 18px; }
+}
+  </style>
 </head>
 <body>
-<h1>Hello</h1>
-<p>onion market management system</p>
+
+  <!-- Header -->
+  <header>
+    <h1>🧅 Onion Market</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="farmer.html">Farmers</a>
+      <a href="buyers.html">Buyers</a>
+      <a href="viewmarketrate.html">Market Rates</a>
+      <a href="reports.html">Reports</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign up</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h2>Smart Onion Market Management</h2>
+    <p>Connecting Farmers and Buyers with Real-Time Market Insights</p>
+    <button onclick="window.location.href='viewmarketrate.html'">View Market Rates</button>
+    <button onclick="window.location.href='signup.html'">Register Now</button>
+  </div>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature-card">📊 <a href="viewmarketrate.html"><h3>Daily Market Rates</h3><p>Check updated onion prices.</p></a></div>
+    <div class="feature-card">👩‍🌾 <a href="farmerdashboard.html"><h3>Farmer Dashboard</h3><p>Upload and manage stock details.</p></a></div>
+    <div class="feature-card">🛒 <a href="buyersdashboard.html"><h3>Buyer Dashboard</h3><p>View availability and book orders.</p></div>
+    <div class="feature-card">📈 <a href="reports.html"><h3>Reports</h3><p>Track demand, supply and trends.</p></a></div>
+  </section>
+
+  <!-- Live Market Rates Table -->
+  <section>
+    <h2 style="text-align:center;">Live Market Rates</h2>
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Market</th>
+        <th>Min Price</th>
+        <th>Max Price</th>
+        <th>Average Price</th>
+      </tr>
+      <tr>
+        <td>15 Sept 2025</td>
+        <td>Nashik</td>
+        <td>₹1200</td>
+        <td>₹1600</td>
+        <td>₹1400</td>
+      </tr>
+      <tr>
+        <td>15 Sept 2025</td>
+        <td>Pune</td>
+        <td>₹1000</td>
+        <td>₹1500</td>
+        <td>₹1250</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- About -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>Our system helps onion farmers, traders, and buyers by providing real-time prices, 
+       digital transactions, and transparent trading.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Onion Market Management | All Rights Reserved</p>
+    <p>
+      <a href="#">Home</a> | 
+      <a href="#">About</a> | 
+      <a href="#">Contact</a>
+    </p>
+  </footer>
+
 </body>
 </html>
